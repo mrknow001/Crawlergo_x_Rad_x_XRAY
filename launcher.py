@@ -58,7 +58,7 @@ def crawlergo(data1):
 	target = data1
 	cmd = [".\crawlergo.exe", "-c", ".\chrome-win\chrome.exe","-t", "20","-f","smart","--fuzz-path", "--output-mode", "json", target]
 	rsp = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	print ('正在启动crawlergo爬取链接，请稍等...')
+	print ('正在启动crawlergo爬取'+data1+'链接，请稍等...')
 	output, error = rsp.communicate()
 	try:
 		result = simplejson.loads(output.decode().split("--[Mission Complete]--")[1])
@@ -79,7 +79,7 @@ def rad(data1):
         target = data1
         cmd = ["rad.exe","--http-proxy","http://127.0.0.1:7777","--target",target]
         rsp = subprocess.Popen(cmd, shell=True)
-        print ('查漏补缺，启动rad爬取链接，请稍等...')
+        print ('查漏补缺，启动rad爬取'+data1+'链接，请稍等...')
         rsp.wait()
 
 
