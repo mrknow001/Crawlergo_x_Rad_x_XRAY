@@ -1,1 +1,3 @@
 https://download.xray.cool/xray
+
+下载解压至此文件夹并命名为xray.exe
